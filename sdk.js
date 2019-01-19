@@ -1,4 +1,4 @@
-      var targetDate = new moment('2019-01-20', 'YYYY-MM-DD hh:mm');
+      var targetDate = new moment('2019-01-19', 'YYYY-MM-DD hh:mm');
       var countdownInterval = setInterval(function () {
         var countElem = document.getElementById('count');
         secondsDiff = targetDate.diff(new moment(), 'seconds');
