@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Happy Valentine's Day" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://dumdumgeniuss.github.io/i-love-zoe-shen/love.html" />
+    <meta property="og:image" content="https://dumdumgeniuss.github.io/i-love-zoe-shen/zoe.png" />
+    <meta property="og:description" content="Messi es novio de Zoe y Zoe le gusta a Messi mucho!" />
+  </head>
+  <body style="margin: 0; padding: 0; background: #ff7775;">
+    <h1 id="title-1" style="font-family: sans-serif; font-size: 16px; padding: 16px; color: white;">Click it to get surprise!!!</h1>
+    <span id="love" style="cursor: pinter; position: fixed; display: inline-block; font-size: 24px; font-family: sans-serif; transition: 0.2s all; color: white;" onclick="onLoveClick()">
+      Catch me ^.<~*
+    </span>
+    <h1 id="title-2" style="margin: 0; display: none; font-family: sans-serif; font-size: 32px; text-align: center; padding: 16px; color: white;">沈聿柔我愛妳!</h1>
+    <img id="love-img" style="display: none; width: 100vw; opacity: 0.5;" src="https://dumdumgeniuss.github.io/i-love-zoe-shen/messi_and_zoe.jpeg">
+    <script>
+      const love = document.getElementById('love');
+      const loveInterval = setInterval(function () {
+        const windowWidth = window.innerWidth;
+        const windowHeight = window.innerHeight;
+
+        const nextPosition = [
+          parseInt((windowWidth - 165) * Math.random(), 10),
+          parseInt(48 + (windowHeight - 48) * Math.random(), 10)
+        ];
+
+        love.style.left = nextPosition[0];
+        love.style.top = nextPosition[1];
+      }, 700);
+
+      function onLoveClick() {
+        clearInterval(loveInterval);
+        document.getElementById('title-1').style.display = 'none';
+        document.getElementById('love').style.display = 'none';
+        document.getElementById('title-2').style.display = 'block';
+        document.getElementById('love-img').style.display = 'block';
+      }
+    </script>
+  </body>
+</html>
